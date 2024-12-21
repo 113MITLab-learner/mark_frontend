@@ -1,0 +1,117 @@
+/* src/PhotoGallery.css */
+.photo-gallery {
+  background-color: var(--form-background);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.photo-gallery h2 {
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+/* 瀑布流網格 */
+.my-masonry-grid {
+  display: flex;
+  margin-left: -15px; /* gutter size offset */
+  width: auto;
+}
+
+.my-masonry-grid_column {
+  padding-left: 15px; /* gutter size */
+  background-clip: padding-box;
+}
+
+/* 照片項目 */
+.photo-item {
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.photo-checkbox {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  transform: scale(1.2);
+}
+
+.photo-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.photo-info {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #555;
+  text-align: left;
+}
+
+/* 分頁樣式 */
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination li {
+  margin: 0 5px;
+}
+
+.pagination li a {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #007bff;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination li.active a {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.pagination li a:hover {
+  background-color: #f0f0f0;
+}
+
+.pagination li.disabled a {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+/* 標籤篩選和批次操作 */
+.filter-section, .batch-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.batch-actions {
+  justify-content: center;
+}
+
+.filter-section label, .batch-actions label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.95rem;
+}
+
+.filter-section select, .batch-actions select {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}

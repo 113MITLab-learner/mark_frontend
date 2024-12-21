@@ -1,0 +1,112 @@
+/* src/App.css */
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--background-color);
+  min-height: 100vh;
+}
+
+/* 調整畫布樣式 */
+.output-canvas {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+}
+
+/* 按鈕樣式 */
+button {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 10px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+.btn-green {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.btn-red {
+  background-color: #F44336;
+  color: white;
+}
+
+.btn-green:hover {
+  background-color: #45a049;
+}
+
+.btn-red:hover {
+  background-color: #e53935;
+}
+
+/* 表單樣式 */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  background-color: var(--form-background);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 300px;
+}
+
+.form input {
+  padding: 8px 12px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form button {
+  width: 150px;
+}
+
+/* 標題樣式 */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+/* 用戶資料樣式 */
+.user-profile {
+  background-color: var(--form-background);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.user-profile h2 {
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+
+.user-profile p {
+  margin: 5px 0;
+  color: var(--text-color);
+}

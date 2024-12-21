@@ -1,0 +1,42 @@
+/* src/components/Controls.css */
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 2rem;
+  }
+  
+  .toggle-buttons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .frequency-photo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .frequency-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .frequency-control input {
+    width: 60px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .btn-photo {
+    background-color: #FF9800;
+    color: white;
+  }
+  
+  .btn-photo:hover {
+    background-color: #FB8C00;
+  }
+  
