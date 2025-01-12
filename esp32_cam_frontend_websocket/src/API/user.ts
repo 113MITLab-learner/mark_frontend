@@ -2,7 +2,7 @@
 
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8000/api/user-profile/';  // 根據實際 API 路徑調整
+const API_URL = 'http://172.20.10.5:20000/api/user-profile/';
 
 export const getUserProfile = async (token: string) => {
     try {

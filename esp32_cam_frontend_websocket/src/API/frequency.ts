@@ -1,6 +1,8 @@
+// src/API/frequency.ts
+
 export const setFrequency = async (frequency: number, token: string): Promise<void> => {
     try {
-      const response = await fetch('http://localhost:8000/api/set_frequency/', {
+      const response = await fetch('http://172.20.10.5:20000/api/set_frequency/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

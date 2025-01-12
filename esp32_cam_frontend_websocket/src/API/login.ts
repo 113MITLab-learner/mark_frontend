@@ -9,7 +9,7 @@ interface LoginResponse {
 
 export const login = async (username: string, password: string): Promise<LoginResponse> => {
   try {
-    const response = await axios.post<LoginResponse>('http://localhost:8000/api/login/', {
+    const response = await axios.post<LoginResponse>('http://172.20.10.5:20000/api/login/', {
       username,
       password,
     });

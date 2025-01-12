@@ -42,7 +42,7 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({ token, refreshTrigger }) =>
       if (showUnlabeledFilter) {
         params.show_unlabeled = 'true';
       }
-      const response = await axios.get('http://localhost:8000/api/user-photos/', {
+      const response = await axios.get('http://172.20.10.5:20000/api/user-photos/', {
         headers: {
           Authorization: `Bearer ${token}`
         },
@@ -93,7 +93,7 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({ token, refreshTrigger }) =>
   const handleBatchLabel = async () => {
     if (selectedPhotoIds.length === 0 || !selectedLabel) return;
     try {
-      await axios.post('http://localhost:8000/api/batch_label_photos/', {
+      await axios.post('http://172.20.10.5:20000/api/batch_label_photos/', {
         photo_ids: selectedPhotoIds,
         label: selectedLabel
       }, {
@@ -112,7 +112,7 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({ token, refreshTrigger }) =>
   const handleBatchDelete = async () => {
     if (selectedPhotoIds.length === 0) return;
     try {
-      await axios.post('http://localhost:8000/api/batch_delete_photos/', {
+      await axios.post('http://172.20.10.5:20000/api/batch_delete_photos/', {
         photo_ids: selectedPhotoIds
       }, {
         headers: {

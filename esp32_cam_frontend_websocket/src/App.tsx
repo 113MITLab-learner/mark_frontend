@@ -29,7 +29,7 @@ const App: React.FC = () => {
   const [profile, setProfile] = useState<any>(null);
   const [refreshTrigger, setRefreshTrigger] = useState<number>(0);
 
-  const imageSrc = useWebSocket('ws://localhost:8000/ws/handrecognition/');
+  const imageSrc = useWebSocket('ws://172.20.10.5:20000/ws/handrecognition/');
   const canvasRef = useCanvas(isLoggedIn && isImageDisplayOn ? imageSrc : null);
 
   const handleLogin = async () => {

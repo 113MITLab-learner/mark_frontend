@@ -1,7 +1,7 @@
 // src/API/imageDisplay.ts
 
 export const toggleImageDisplay = async (action: 'on' | 'off', token: string) => {
-    const response = await fetch('http://localhost:8000/api/toggle_image_display/', {
+    const response = await fetch('http://172.20.10.5:20000/api/toggle_image_display/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

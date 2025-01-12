@@ -1,7 +1,7 @@
 // src/API/photo.ts
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8000/api/delete-photo/';  // 根據實際 API 路徑調整
+const API_URL = 'http://172.20.10.5:20000/api/delete-photo/';
 
 export const deletePhoto = async (photoId: number, token: string) => {
     try {
