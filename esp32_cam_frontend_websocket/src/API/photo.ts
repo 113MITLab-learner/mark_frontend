@@ -1,7 +1,8 @@
 // src/API/photo.ts
 import axios from 'axios';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
-const API_URL = 'http://172.20.10.5:20000/api/delete-photo/';
+const API_URL = `${API_BASE_URL}/api/delete-photo/`;
 
 export const deletePhoto = async (photoId: number, token: string) => {
     try {

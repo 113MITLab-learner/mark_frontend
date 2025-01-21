@@ -1,7 +1,9 @@
 // src/API/detection.ts
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 export const toggleDetection = async (action: 'on' | 'off', token: string) => {
-    const response = await fetch('http://172.20.10.5:20000/api/toggle_detection/', {
+    const response = await fetch(`${API_BASE_URL}/api/toggle_detection/`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

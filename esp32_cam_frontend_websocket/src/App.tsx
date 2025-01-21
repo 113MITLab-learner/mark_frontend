@@ -15,6 +15,7 @@ import Header from './components/Header';
 import LoginForm from './components/LoginForm';
 import Controls from './components/Controls';
 import UserProfile from './components/UserProfile';
+const WS_BASE_URL = import.meta.env.VITE_WS_BASE_URL;
 
 const App: React.FC = () => {
   const [username, setUsername] = useState<string>('');
@@ -29,7 +30,7 @@ const App: React.FC = () => {
   const [profile, setProfile] = useState<any>(null);
   const [refreshTrigger, setRefreshTrigger] = useState<number>(0);
 
-  const imageSrc = useWebSocket('ws://172.20.10.5:20000/ws/handrecognition/');
+  const imageSrc = useWebSocket(`${WS_BASE_URL}/ws/handrecognition/`);
   const canvasRef = useCanvas(isLoggedIn && isImageDisplayOn ? imageSrc : null);
 
   const handleLogin = async () => {
@@ -142,7 +143,7 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <Header title="✨ ESP32-CAM 即時影像與手部辨識 ✨" />
+      <Header title="✨ RapidData Labeler ✨" />
       
       {/* 顯示用戶資料 */}
       {profile && <UserProfile profile={profile} />}

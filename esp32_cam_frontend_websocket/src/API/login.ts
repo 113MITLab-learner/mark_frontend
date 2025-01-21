@@ -1,6 +1,7 @@
 // src/API/login.ts
 
 import axios from 'axios';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 interface LoginResponse {
   refresh: string;
@@ -9,7 +10,7 @@ interface LoginResponse {
 
 export const login = async (username: string, password: string): Promise<LoginResponse> => {
   try {
-    const response = await axios.post<LoginResponse>('http://172.20.10.5:20000/api/login/', {
+    const response = await axios.post<LoginResponse>(`${API_BASE_URL}/api/login/`, {
       username,
       password,
     });
